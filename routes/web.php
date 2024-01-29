@@ -8,6 +8,7 @@ use App\Http\Controllers\Mail\MailController;
 use App\Http\Controllers\Other\CalendarController;
 use App\Http\Controllers\Other\GalleryController;
 use App\Http\Controllers\Other\KanbanController;
+use App\Http\Controllers\Other\WidgetController;
 use App\Http\Controllers\Page\PageController;
 use App\Http\Controllers\Search\SearchController;
 use App\Http\Controllers\Table\TableController;
@@ -28,7 +29,7 @@ use Illuminate\Support\Facades\Route;
 // Home Route
 Route::get('/', [HomeController::class, 'index'])->name('index');
 // Widget Route
-Route::get('/widget', [HomeController::class, 'index'])->name('widget');
+Route::get('/widget', [WidgetController::class, 'index'])->name('widget');
 // Chart Route
 Route::prefix('chart')->group(function () {
     Route::get('/chart-js', [ChartController::class, 'chartJs'])->name('chart.chartJs');
