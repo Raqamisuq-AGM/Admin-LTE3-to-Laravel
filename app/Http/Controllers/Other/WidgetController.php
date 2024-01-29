@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class WidgetController extends Controller
 {
     //Widget route controller
-    public function chatJs(){
+    public function index(){
         return view('pages.widgets.widget');
     }
 }
